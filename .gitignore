@@ -33,3 +33,6 @@ node_modules
 # Vagrant
 bin
 .vagrant
+
+# extra crap
+.DS_Store

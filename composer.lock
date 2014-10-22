@@ -3,7 +3,7 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "0cd80ca44decb189ef3878d1db5ca25d",
+    "hash": "4163e7498fbd69332f7b7630be7e99bf",
     "packages": [
         {
             "name": "composer/installers",
@@ -218,6 +218,52 @@
             },
             "type": "wordpress-plugin",
             "homepage": "http://wordpress.org/plugins/cryptx/"
+        },
+        {
+            "name": "wpackagist-plugin/types",
+            "version": "1.6.3",
+            "source": {
+                "type": "svn",
+                "url": "http://plugins.svn.wordpress.org/types/",
+                "reference": "trunk"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "http://downloads.wordpress.org/plugin/types.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "replace": {
+                "wpackagist/types": "self.version"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "http://wordpress.org/plugins/types/"
+        },
+        {
+            "name": "wpackagist-plugin/wp-biographia",
+            "version": "3.3.2",
+            "source": {
+                "type": "svn",
+                "url": "http://plugins.svn.wordpress.org/wp-biographia/",
+                "reference": "tags/3.3.2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "http://downloads.wordpress.org/plugin/wp-biographia.3.3.2.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "replace": {
+                "wpackagist/wp-biographia": "self.version"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "http://wordpress.org/plugins/wp-biographia/"
         }
     ],
     "packages-dev": [

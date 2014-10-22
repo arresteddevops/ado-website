@@ -243,11 +243,13 @@ function create_post_type() {
       ),
       'public' => true,
       'has_archive' => true,
+      'hierarchical' => false,
+      'capability_type' => 'post',
       'menu_position' => 5,
       'rewrite' => array(
        'slug' => 'episodes' ),
       'supports' => array( 
-        'title','custom-fields' )
+        'title','excerpt','editor','thumbnail','comments','custom-fields' )
     )
   );
 }

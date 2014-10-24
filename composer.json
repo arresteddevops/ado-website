@@ -64,7 +64,8 @@
     "wpackagist-plugin/co-authors-plus": "*",
     "wpackagist-plugin/wp-biographia": "*",
     "wpackagist-plugin/powerpress": "*",
-    "wpackagist-plugin/simple-local-avatars": "*"
+    "wpackagist-plugin/simple-local-avatars": "*",
+    "wpackagist-plugin/ewww-image-optimizer": "*"
   },
   "extra": {
     "installer-paths": {

@@ -1,9 +1,10 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
+        "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "This file is @generated automatically"
     ],
-    "hash": "4163e7498fbd69332f7b7630be7e99bf",
+    "hash": "478e185aa31784d5bd9d78083c995434",
     "packages": [
         {
             "name": "composer/installers",
@@ -197,6 +198,29 @@
             "type": "webroot"
         },
         {
+            "name": "wpackagist-plugin/co-authors-plus",
+            "version": "3.1.1",
+            "source": {
+                "type": "svn",
+                "url": "http://plugins.svn.wordpress.org/co-authors-plus/",
+                "reference": "tags/3.1.1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "http://downloads.wordpress.org/plugin/co-authors-plus.3.1.1.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "replace": {
+                "wpackagist/co-authors-plus": "self.version"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "http://wordpress.org/plugins/co-authors-plus/"
+        },
+        {
             "name": "wpackagist-plugin/cryptx",
             "version": "3.2.8",
             "source": {
@@ -220,16 +244,16 @@
             "homepage": "http://wordpress.org/plugins/cryptx/"
         },
         {
-            "name": "wpackagist-plugin/types",
-            "version": "1.6.3",
+            "name": "wpackagist-plugin/powerpress",
+            "version": "5.0.9",
             "source": {
                 "type": "svn",
-                "url": "http://plugins.svn.wordpress.org/types/",
-                "reference": "trunk"
+                "url": "http://plugins.svn.wordpress.org/powerpress/",
+                "reference": "tags/5.0.9"
             },
             "dist": {
                 "type": "zip",
-                "url": "http://downloads.wordpress.org/plugin/types.zip",
+                "url": "http://downloads.wordpress.org/plugin/powerpress.5.0.9.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -237,10 +261,33 @@
                 "composer/installers": "~1.0"
             },
             "replace": {
-                "wpackagist/types": "self.version"
+                "wpackagist/powerpress": "self.version"
             },
             "type": "wordpress-plugin",
-            "homepage": "http://wordpress.org/plugins/types/"
+            "homepage": "http://wordpress.org/plugins/powerpress/"
+        },
+        {
+            "name": "wpackagist-plugin/simple-local-avatars",
+            "version": "2.0",
+            "source": {
+                "type": "svn",
+                "url": "http://plugins.svn.wordpress.org/simple-local-avatars/",
+                "reference": "tags/2.0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "http://downloads.wordpress.org/plugin/simple-local-avatars.2.0.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "replace": {
+                "wpackagist/simple-local-avatars": "self.version"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "http://wordpress.org/plugins/simple-local-avatars/"
         },
         {
             "name": "wpackagist-plugin/wp-biographia",
@@ -266,20 +313,13 @@
             "homepage": "http://wordpress.org/plugins/wp-biographia/"
         }
     ],
-    "packages-dev": [
-
-    ],
-    "aliases": [
-
-    ],
+    "packages-dev": [],
+    "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [
-
-    ],
+    "stability-flags": [],
+    "prefer-stable": false,
     "platform": {
         "php": ">=5.3.2"
     },
-    "platform-dev": [
-
-    ]
+    "platform-dev": []
 }

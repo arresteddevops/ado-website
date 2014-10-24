@@ -36,3 +36,5 @@ bin
 
 # extra crap
 .DS_Store
+
+.bundle

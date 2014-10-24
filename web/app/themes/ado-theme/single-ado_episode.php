@@ -60,15 +60,21 @@
 
             <?php
 
-            $guestlist = get_post_meta($post_id, 'guest', $single = false);
-            if($guestlist <> NULL){
-            echo "<h2>Guests</h2>";
-              foreach ($guestlist as $guest) {
-                echo do_shortcode('[wp_biographia user="' . $guest . '"]');
-              }
-            }
+            //$guestlist = get_post_meta($post_id, 'guest', $single = false);
+            //if($guestlist <> NULL){
+            //echo "<h2>Guests</h2>";
+            // foreach ($guestlist as $guest) {
+            //    echo do_shortcode('[wp_biographia user="' . $guest . '"]');
+            //  }
+            //}
             ?>
 
+            <h2>Guests</h2>
+            <?php $coauthors = get_coauthors(); ?>
+            <?php foreach( $coauthors as $coauthor ) : ?>
+            <?php if ($coauthor->user_level <> '10' ) {  ?>
+            <?php echo do_shortcode('[wp_biographia user="' . $coauthor->nickname . '"]');}?>
+            <?php endforeach; ?>
             
           </section> <!-- end article section -->
 

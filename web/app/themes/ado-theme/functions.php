@@ -249,7 +249,7 @@ function create_post_type() {
       'rewrite' => array(
        'slug' => 'episodes' ),
       'supports' => array( 
-        'title','excerpt','editor','thumbnail','comments','custom-fields' )
+        'title','excerpt','editor','author','thumbnail','comments','custom-fields' )
     )
   );
 }

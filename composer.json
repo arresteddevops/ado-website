@@ -61,8 +61,10 @@
     "composer/installers": "v1.0.12",
     "vlucas/phpdotenv": "~1.0.6",
     "wpackagist-plugin/CryptX": "~3.2.8",
-    "wpackagist-plugin/Types": "*",
-    "wpackagist-plugin/wp-biographia": "*"
+    "wpackagist-plugin/co-authors-plus": "*",
+    "wpackagist-plugin/wp-biographia": "*",
+    "wpackagist-plugin/powerpress": "*",
+    "wpackagist-plugin/simple-local-avatars": "*"
   },
   "extra": {
     "installer-paths": {

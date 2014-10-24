@@ -1,0 +1,5 @@
+.prli-social-buttons-bar   { padding: 10px 0 10px 0; }
+.prli-social-buttons-bar a { border: 0px; width: 32px; height: 32px; }
+.prli-first-tweet          { border-top: 1px dashed #999999; }
+.prli-tweet                { padding: 8px 5px 8px 5px; margin: 0 10px 0 10px; font-size: 12px; line-height: 18px; font-family: Arial; border-bottom: 1px dashed #999999; }
+.prli-tweet-image          { padding-right: 10px; }

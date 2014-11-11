@@ -19,7 +19,10 @@
 
         <div id="inner-content" class="wrap cf">
 
-            <div id="main" class="m-all t-2of3 d-5of7 cf" role="main">
+            <div id="main" class="span_9 cf" role="main">
+
+            <div class="row">
+
               <?php
               $args=array(
                 'post_type' => 'ado_episode',
@@ -30,20 +33,24 @@
               $my_query = null;
               $my_query = new WP_Query($args);
               if( $my_query->have_posts() ) {
-                while ($my_query->have_posts()) : $my_query->the_post(); ?>
-                <!-- this is where the little thing goes -->
-                <?php the_post_thumbnail('ado-episode-archive'); ?>
-                <br />
-                <?php the_title(); ?>
-                <?php the_excerpt(); ?>
-                  
+ 
+                while ($my_query->have_posts()) : $my_query->the_post();
+                 ?>
+                <!-- individual post -->
+
+                <div id="post" class="span_3 col" role="post">
+                  <?php the_post_thumbnail('ado-episode-archive'); ?>
+                  <br />
+                  <b><?php the_title(); ?></b>
+                  <?php the_excerpt(); ?>
+                </div>  
                   <?php
                 //end the individual part
                 endwhile;
               }
               wp_reset_query();  // Restore global post data stomped by the_post().
               ?>
-
+              </div>
             </div>
 
           <?php get_sidebar(); ?>

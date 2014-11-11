@@ -844,6 +844,212 @@ them however you see fit.
     float: left;
     padding-right: 0.75em;
     width: 8.33%; } }
+/**
+ * Gridpak Beta SCSS 
+ *
+ * Generator - http://gridpak.com/
+ * Created by @erskinedesign
+ */
+/* Reusable column setup */
+.col {
+  border: 0px solid transparent;
+  float: left;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -moz-background-clip: padding-box !important;
+  -webkit-background-clip: padding-box !important;
+  background-clip: padding-box !important; }
+
+/* 1. 3 Column Grid 0px - 319px 
+----------------------------------------------------------------------------- 
+
+Span 1:    33.3333333333%
+Span 2:    66.6666666667%
+Span 3:    100%
+
+----------------------------------------------------------------------------- */
+@media screen and (min-width: 0px) and (max-width: 319px) {
+  .row {
+    margin-left: -2px; }
+
+  .col {
+    border-left-width: 2px;
+    padding: 0 2px; }
+
+  /* --- Gridpak variables ---*/
+  /*
+  Add your semantic classnames in alongside their corresponding spans here. e.g.
+  
+  .span_3,
+  .my_semantic_class_name {
+      ...
+  }
+  
+  */
+  .span_1 {
+    width: 33.3333333333%;
+    border-left-width: 2px;
+    padding: 0 2px;
+    margin-left: 0; }
+
+  .span_2 {
+    width: 66.6666666667%;
+    border-left-width: 2px;
+    padding: 0 2px;
+    margin-left: 0; }
+
+  .span_3 {
+    margin-left: 0;
+    width: 100%; } }
+/* 2. 6 Column Grid 320px - 779px 
+----------------------------------------------------------------------------- 
+
+Span 1:    16.6666666667%
+Span 2:    33.3333333333%
+Span 3:    50.0%
+Span 4:    66.6666666667%
+Span 5:    83.3333333333%
+Span 6:    100%
+
+----------------------------------------------------------------------------- */
+@media screen and (min-width: 320px) and (max-width: 779px) {
+  .row {
+    margin-left: -2px; }
+
+  .col {
+    border-left-width: 2px;
+    padding: 0 2px; }
+
+  /* --- Gridpak variables ---*/
+  .span_1 {
+    width: 16.6666666667%;
+    border-left-width: 2px;
+    padding: 0 2px;
+    margin-left: 0; }
+
+  .span_2 {
+    width: 33.3333333333%;
+    border-left-width: 2px;
+    padding: 0 2px;
+    margin-left: 0; }
+
+  .span_3 {
+    width: 50%;
+    border-left-width: 2px;
+    padding: 0 2px;
+    margin-left: 0; }
+
+  .span_4 {
+    width: 66.6666666667%;
+    border-left-width: 2px;
+    padding: 0 2px;
+    margin-left: 0; }
+
+  .span_5 {
+    width: 83.3333333333%;
+    border-left-width: 2px;
+    padding: 0 2px;
+    margin-left: 0; }
+
+  .span_6 {
+    margin-left: 0;
+    width: 100%; } }
+/* 3. 12 Column Grid 780px - Infinity 
+----------------------------------------------------------------------------- 
+
+Span 1:    8.33333333333%
+Span 2:    16.6666666667%
+Span 3:    25.0%
+Span 4:    33.3333333333%
+Span 5:    41.6666666667%
+Span 6:    50.0%
+Span 7:    58.3333333333%
+Span 8:    66.6666666667%
+Span 9:    75.0%
+Span 10:    83.3333333333%
+Span 11:    91.6666666667%
+Span 12:    100%
+
+----------------------------------------------------------------------------- */
+@media screen and (min-width: 780px) {
+  .row {
+    margin-left: -2px; }
+
+  .col {
+    border-left-width: 2px;
+    padding: 0 2px; }
+
+  /* --- Gridpak variables ---*/
+  .span_1 {
+    width: 8.3333333333%;
+    border-left-width: 2px;
+    padding: 0 2px;
+    margin-left: 0; }
+
+  .span_2 {
+    width: 16.6666666667%;
+    border-left-width: 2px;
+    padding: 0 2px;
+    margin-left: 0; }
+
+  .span_3 {
+    width: 25%;
+    border-left-width: 2px;
+    padding: 0 2px;
+    margin-left: 0; }
+
+  .span_4 {
+    width: 33.3333333333%;
+    border-left-width: 2px;
+    padding: 0 2px;
+    margin-left: 0; }
+
+  .span_5 {
+    width: 41.6666666667%;
+    border-left-width: 2px;
+    padding: 0 2px;
+    margin-left: 0; }
+
+  .span_6 {
+    width: 50%;
+    border-left-width: 2px;
+    padding: 0 2px;
+    margin-left: 0; }
+
+  .span_7 {
+    width: 58.3333333333%;
+    border-left-width: 2px;
+    padding: 0 2px;
+    margin-left: 0; }
+
+  .span_8 {
+    width: 66.6666666667%;
+    border-left-width: 2px;
+    padding: 0 2px;
+    margin-left: 0; }
+
+  .span_9 {
+    width: 75%;
+    border-left-width: 2px;
+    padding: 0 2px;
+    margin-left: 0; }
+
+  .span_10 {
+    width: 83.3333333333%;
+    border-left-width: 2px;
+    padding: 0 2px;
+    margin-left: 0; }
+
+  .span_11 {
+    width: 91.6666666667%;
+    border-left-width: 2px;
+    padding: 0 2px;
+    margin-left: 0; }
+
+  .span_12 {
+    margin-left: 0;
+    width: 100%; } }
 /*!
  *  Font Awesome 4.2.0 by @davegandy - http://fontawesome.io - @fontawesome
  *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)

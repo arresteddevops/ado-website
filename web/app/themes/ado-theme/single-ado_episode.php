@@ -76,6 +76,22 @@
             <?php if ($coauthor->user_level <> '10' ) {  ?>
             <?php echo do_shortcode('[wp_biographia user="' . $coauthor->nickname . '"]');}?>
             <?php endforeach; ?>
+
+            
+            <?php
+              global $post;
+              $checkout = get_post_meta( $post->ID, '_cmb2_ado_checkouts', true );
+              if ($checkout <> NULL){
+                echo('<h2>Check Outs</h2>');
+                echo($checkout);
+              }
+
+              $sponsor_1_banner =  get_post_meta( $post->ID, '_cmb2_sponsor_1_banner', true );
+              if ($checkout <> NULL){
+                echo('<img src ="' . $sponsor_1_banner . '">');
+              }
+              ?>
+
             
           </section> <!-- end article section -->
 

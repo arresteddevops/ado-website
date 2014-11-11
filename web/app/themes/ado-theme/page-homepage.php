@@ -39,7 +39,7 @@
                 <!-- individual post -->
 
                 <div id="post" class="span_3 col" role="post">
-                  <?php the_post_thumbnail('ado-episode-archive'); ?>
+                  <?php the_post_thumbnail('thumbnail'); ?>
                   <br />
                   <b><?php the_title(); ?></b>
                   <?php the_excerpt(); ?>

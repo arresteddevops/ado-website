@@ -76,7 +76,7 @@ if ( ! isset( $content_width ) ) {
 add_image_size( 'bones-thumb-600', 600, 150, true );
 add_image_size( 'bones-thumb-300', 300, 100, true );
 add_image_size( 'bones-thumb-500-square', 500, 500, true);
-add_image_size( 'ado-episode-archive', 200, 200, true);
+add_image_size( 'bones-thumb-200-square', 200, 200, true);
 
 /*
 to add more sizes, simply copy a line from above
@@ -105,7 +105,7 @@ function bones_custom_image_sizes( $sizes ) {
         'bones-thumb-600' => __('600px by 150px'),
         'bones-thumb-300' => __('300px by 100px'),
         'bones-thumb-500-square' => __('500px by 500px'),
-        'ado-episode-archive' => __('200px by 200px'),
+        'bones-thumb-200-square' => __('200px by 200px'),
     ) );
 }
 
@@ -258,6 +258,7 @@ function create_post_type() {
   );
 }
 */
+require_once( 'library/ado-metaboxes.php' );
 
 /*
 This is a modification of a function found in the

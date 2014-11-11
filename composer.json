@@ -65,7 +65,8 @@
     "wpackagist-plugin/wp-biographia": "*",
     "wpackagist-plugin/powerpress": "*",
     "wpackagist-plugin/simple-local-avatars": "*",
-    "wpackagist-plugin/ewww-image-optimizer": "*"
+    "wpackagist-plugin/ewww-image-optimizer": "*",
+    "wpackagist-plugin/wordpress-importer": "*"
   },
   "extra": {
     "installer-paths": {

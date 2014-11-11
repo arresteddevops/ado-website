@@ -20,6 +20,7 @@
 								</header>
 
 								<section class="entry-content cf">
+                <?php the_post_thumbnail('bones-thumb-600'); ?>
 									<?php the_content(); ?>
 								</section>
 

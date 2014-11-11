@@ -260,6 +260,15 @@ function create_post_type() {
 */
 require_once( 'library/ado-metaboxes.php' );
 
+/* Allow line breaks in user bios */
+
+remove_filter('pre_user_description', 'wp_filter_kses');
+add_filter('pre_user_description', 'wp_filter_post_kses');
+add_filter('pre_user_description', 'wptexturize');
+add_filter('pre_user_description', 'wpautop');
+add_filter('pre_user_description', 'convert_chars');
+add_filter('pre_user_description', 'balanceTags', 50);
+
 /*
 This is a modification of a function found in the
 twentythirteen theme where we can declare some

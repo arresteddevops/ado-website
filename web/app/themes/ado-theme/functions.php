@@ -236,28 +236,6 @@ function bones_comments( $comment, $args, $depth ) {
 
 /************* ADO Episode Custom Post Type *********************/
 
-/*
-add_action( 'init', 'create_post_type' );
-function create_post_type() {
-  register_post_type( 'ado_episode',
-    array(
-      'labels' => array(
-        'name' => __( 'Episodes' ),
-        'singular_name' => __( 'Episode' )
-      ),
-      'public' => true,
-      'has_archive' => true,
-      'hierarchical' => false,
-      'capability_type' => 'post',
-      'menu_position' => 5,
-      'rewrite' => array(
-       'slug' => 'episodes' ),
-      'supports' => array( 
-        'title','excerpt','editor','author','thumbnail','comments','custom-fields' )
-    )
-  );
-}
-*/
 require_once( 'library/ado-metaboxes.php' );
 
 /* Allow line breaks in user bios */

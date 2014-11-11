@@ -47,7 +47,7 @@
           </header>
 
           <section class="entry-content cf">
-          <?php the_post_thumbnail('bones-thumb-600'); ?>
+          <?php the_post_thumbnail('bones-thumb-500-square'); ?>
           <?php the_excerpt(); ?>
           <?php 
             if (get_the_content() <> NULL){

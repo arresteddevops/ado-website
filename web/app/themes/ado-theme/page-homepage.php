@@ -38,8 +38,8 @@
                  ?>
                 <!-- individual post -->
 
-                <div id="post" class="span_3 col" role="post">
-                  <?php the_post_thumbnail('thumbnail'); ?>
+                <div id="post" class="span_4 col" role="post">
+                  <?php the_post_thumbnail('bones-thumb-200-square'); ?>
                   <br />
                   <b><?php the_title(); ?></b>
                   <?php the_excerpt(); ?>

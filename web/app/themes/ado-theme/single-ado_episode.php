@@ -48,7 +48,9 @@
 
           <section class="entry-content cf">
           <?php the_post_thumbnail('bones-thumb-500-square'); ?>
-          <?php the_excerpt(); ?>
+          <?php $episode_summary = get_post_meta($post_id, '_cmb2_ado_summary', true); ?>
+          <?php echo( wpautop( $episode_summary ) ); ?>
+          <?php //the_excerpt(); ?>
           <?php 
             if (get_the_content() <> NULL){
 
@@ -76,22 +78,29 @@
             <?php if ($coauthor->user_level <> '10' ) {  ?>
             <?php echo do_shortcode('[wp_biographia user="' . $coauthor->nickname . '"]');}?>
             <?php endforeach; ?>
-
             
             <?php
               global $post;
               $checkout = get_post_meta( $post->ID, '_cmb2_ado_checkouts', true );
               if ($checkout <> NULL){
                 echo('<h2>Check Outs</h2>');
-                echo($checkout);
+                echo( wpautop( $checkout ) );
+              }
+              $sponsor_1_url =  get_post_meta( $post->ID, '_cmb2_ado_sponsor_1_url', true );
+              $sponsor_1_banner =  get_post_meta( $post->ID, '_cmb2_sponsor_1_banner', true );
+              $sponsor_1_text = get_post_meta( $post->ID, '_cmb2_ado_sponsor_1_text', true );
+              $sponsor_2_url =  get_post_meta( $post->ID, '_cmb2_ado_sponsor_2_url', true );
+
+              $sponsor_2_banner =  get_post_meta( $post->ID, '_cmb2_ado_sponsor_2_banner', true );
+              $sponsor_2_text = get_post_meta( $post->ID, '_cmb2_ado_sponsor_2_text', true );
+              if ($sponsor_1_banner <> NULL){
+                echo('<a href = "' . $sponsor_1_url . '"><img src ="' . $sponsor_1_banner . '"></a>');
               }
 
-              $sponsor_1_banner =  get_post_meta( $post->ID, '_cmb2_sponsor_1_banner', true );
-              if ($checkout <> NULL){
-                echo('<img src ="' . $sponsor_1_banner . '">');
+              if ($sponsor_2_banner <> NULL){
+                echo('<a href = "' . $sponsor_2_url . '"><img src ="' . $sponsor_2_banner . '"></a>');
               }
               ?>
-
             
           </section> <!-- end article section -->
 

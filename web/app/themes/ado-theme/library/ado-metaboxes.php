@@ -46,24 +46,70 @@ function cmb2_sample_metaboxes( array $meta_boxes ) {
 
   $meta_boxes['episode_metabox'] = array(
     'id'            => 'episode_metabox',
-    'title'         => __( 'Episode Metabox', 'cmb2'),
+    'title'         => __( 'Episode Information', 'cmb2'),
     'object_types'  => array('ado_episode', ),
     'context'       => 'normal',
     'priority'      => 'high',
     'show_names'    => true,
     'fields'        => array(
         array(
+          'name'    => __( 'Summary', 'cmb2' ),
+          'desc'    => __( 'A one paragraph summary of the episode. Used in podcast summary, feed, and also on the short display on the homepage', 'cmb2' ),
+          'id'      => $prefix . 'ado_summary',
+          'type'    => 'wysiwyg',
+          'options' => array( 'textarea_rows' => 10, ),
+      ), 
+        array(
+          'name'    => __( 'Show Notes', 'cmb2' ),
+          'desc'    => __( 'All of the show notes. Go crazy.', 'cmb2' ),
+          'id'      => $prefix . 'ado_show_notes',
+          'type'    => 'wysiwyg',
+          'options' => array( 'textarea_rows' => 10, ),
+      ),                     
+        array(
           'name'    => __( 'Check Outs', 'cmb2' ),
-          'desc'    => __( 'field description (optional)', 'cmb2' ),
+          'desc'    => __( 'Check outs for each person. You will have to write the UL list stuff by hand for now', 'cmb2' ),
           'id'      => $prefix . 'ado_checkouts',
           'type'    => 'wysiwyg',
           'options' => array( 'textarea_rows' => 5, ),
         ),
         array(
+          'name'    => __( 'Sponsor 1 Text', 'cmb2' ),
+          'desc'    => __( 'The text for Sponsor 1 ad. Please make sure to include inline links!', 'cmb2' ),
+          'id'      => $prefix . 'ado_sponsor_1_text',
+          'type'    => 'wysiwyg',
+          'options' => array( 'textarea_rows' => 5, ),
+        ),
+        array(
           'name' => __( 'Sponsor 1 Banner', 'cmb2' ),
-          'desc' => __( 'Upload an image or enter a URL.', 'cmb2' ),
+          'desc' => __( 'Upload the banner image for Sponsor 1 for this episode (you can also choose it from one already uploaded)', 'cmb2' ),
           'id'   => $prefix . 'sponsor_1_banner',
           'type' => 'file',
+        ),
+        array(
+          'name' => __( 'Sponsor 1 URL', 'cmb2' ),
+          'id'   => $prefix . 'ado_sponsor_1_url',
+          'type' => 'text_url',
+          // 'protocols' => array( 'http', 'https', 'ftp', 'ftps', 'mailto', 'news', 'irc', 'gopher', 'nntp', 'feed', 'telnet' ), // Array of allowed protocols
+        ),
+        array(
+          'name'    => __( 'Sponsor 2 Text', 'cmb2' ),
+          'desc'    => __( 'The text for Sponsor 2 ad. Please make sure to include inline links!', 'cmb2' ),
+          'id'      => $prefix . 'ado_sponsor_2_text',
+          'type'    => 'wysiwyg',
+          'options' => array( 'textarea_rows' => 5, ),
+        ),
+        array(
+          'name' => __( 'Sponsor 2 Banner', 'cmb2' ),
+          'desc' => __( 'Upload the banner image for Sponsor 2 for this episode (you can also choose it from one already uploaded)', 'cmb2' ),
+          'id'   => $prefix . 'ado_sponsor_2_banner',
+          'type' => 'file',
+        ),
+        array(
+          'name' => __( 'Sponsor 2 URL', 'cmb2' ),
+          'id'   => $prefix . 'ado_sponsor_2_url',
+          'type' => 'text_url',
+          // 'protocols' => array( 'http', 'https', 'ftp', 'ftps', 'mailto', 'news', 'irc', 'gopher', 'nntp', 'feed', 'telnet' ), // Array of allowed protocols
         ),
     ),
   );
@@ -151,30 +197,7 @@ function cmb2_sample_metaboxes( array $meta_boxes ) {
         'id'   => $prefix . 'test_datetime_timestamp',
         'type' => 'text_datetime_timestamp',
       ),
-      // This text_datetime_timestamp_timezone field type
-      // is only compatible with PHP versions 5.3 or above.
-      // Feel free to uncomment and use if your server meets the requirement
-      // array(
-      //  'name' => __( 'Test Date/Time Picker/Time zone Combo (serialized DateTime object)', 'cmb2' ),
-      //  'desc' => __( 'field description (optional)', 'cmb2' ),
-      //  'id'   => $prefix . 'test_datetime_timestamp_timezone',
-      //  'type' => 'text_datetime_timestamp_timezone',
-      // ),
-      array(
-        'name' => __( 'Test Money', 'cmb2' ),
-        'desc' => __( 'field description (optional)', 'cmb2' ),
-        'id'   => $prefix . 'test_textmoney',
-        'type' => 'text_money',
-        // 'before_field' => '£', // override '$' symbol if needed
-        // 'repeatable' => true,
-      ),
-      array(
-        'name'    => __( 'Test Color Picker', 'cmb2' ),
-        'desc'    => __( 'field description (optional)', 'cmb2' ),
-        'id'      => $prefix . 'test_colorpicker',
-        'type'    => 'colorpicker',
-        'default' => '#ffffff'
-      ),
+ 
       array(
         'name' => __( 'Test Text Area', 'cmb2' ),
         'desc' => __( 'field description (optional)', 'cmb2' ),
@@ -302,26 +325,7 @@ function cmb2_sample_metaboxes( array $meta_boxes ) {
     ),
   );
 
-  /**
-   * Metabox to be displayed on a single page ID
-   */
-  $meta_boxes['about_page_metabox'] = array(
-    'id'           => 'about_page_metabox',
-    'title'        => __( 'About Page Metabox', 'cmb2' ),
-    'object_types' => array( 'page', ), // Post type
-    'context'      => 'normal',
-    'priority'     => 'high',
-    'show_names'   => true, // Show field names on the left
-    'show_on'      => array( 'id' => array( 2, ) ), // Specific post IDs to display this metabox
-    'fields'       => array(
-      array(
-        'name' => __( 'Test Text', 'cmb2' ),
-        'desc' => __( 'field description (optional)', 'cmb2' ),
-        'id'   => $prefix . '_about_test_text',
-        'type' => 'text',
-      ),
-    )
-  );
+
 
   /**
    * Repeatable Field Groups
@@ -369,28 +373,6 @@ function cmb2_sample_metaboxes( array $meta_boxes ) {
       ),
     ),
   );
-
-
-  /**
-   * Metabox for an options page. Will not be added automatically, but needs to be called with
-   * the `cmb2_metabox_form` helper function. See wiki for more info.
-   */
-  $meta_boxes['options_page'] = array(
-    'id'      => 'options_page',
-    'title'   => __( 'Theme Options Metabox', 'cmb2' ),
-    'show_on' => array( 'options-page' => array( $prefix . 'theme_options', ), ),
-    'fields'  => array(
-      array(
-        'name'    => __( 'Site Background Color', 'cmb2' ),
-        'desc'    => __( 'field description (optional)', 'cmb2' ),
-        'id'      => $prefix . 'bg_color',
-        'type'    => 'colorpicker',
-        'default' => '#ffffff'
-      ),
-    )
-  );
-
-  // Add other metaboxes as needed
 
   return $meta_boxes;
 }

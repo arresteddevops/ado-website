@@ -23,7 +23,7 @@ web/app/uploads/*
 !web/app/mu-plugins/register-theme-directory.php
 !web/app/mu-plugins/bedrock-autoloader.php
 !web/app/plugins/pretty-link/*
-
+web/app/ewww/*
 
 # Vendor (e.g. Composer)
 vendor/*

@@ -28,7 +28,7 @@ function custom_post_example() {
 	register_post_type( 'custom_type', /* (http://codex.wordpress.org/Function_Reference/register_post_type) */
 		// let's now add all the options for this post type
 		array( 'labels' => array(
-			'name' => __( 'Custom Types', 'bonestheme' ), /* This is the Title of the Group */
+			'name' => __( 'Custom Bones Types', 'bonestheme' ), /* This is the Title of the Group */
 			'singular_name' => __( 'Custom Post', 'bonestheme' ), /* This is the individual type */
 			'all_items' => __( 'All Custom Posts', 'bonestheme' ), /* the all items menu item */
 			'add_new' => __( 'Add New', 'bonestheme' ), /* The add new menu item */

@@ -28,7 +28,7 @@ function bones_ahoy() {
   load_theme_textdomain( 'bonestheme', get_template_directory() . '/library/translation' );
 
   // USE THIS TEMPLATE TO CREATE CUSTOM POST TYPES EASILY
-  require_once( 'library/custom-post-type.php' );
+  require_once( 'library/ado_episode_post_type.php' );
 
   // launching operation cleanup
   add_action( 'init', 'bones_head_cleanup' );
@@ -76,7 +76,7 @@ if ( ! isset( $content_width ) ) {
 add_image_size( 'bones-thumb-600', 600, 150, true );
 add_image_size( 'bones-thumb-300', 300, 100, true );
 add_image_size( 'bones-thumb-500-square', 500, 500, true);
-add_image_size( 'ado-episode-archive', 400, 400, true);
+add_image_size( 'ado-episode-archive', 300, 300, true);
 
 /*
 to add more sizes, simply copy a line from above
@@ -105,7 +105,7 @@ function bones_custom_image_sizes( $sizes ) {
         'bones-thumb-600' => __('600px by 150px'),
         'bones-thumb-300' => __('300px by 100px'),
         'bones-thumb-500-square' => __('500px by 500px'),
-        'ado-episode-archive' => __('400px by 400px'),
+        'ado-episode-archive' => __('300px by 300px'),
     ) );
 }
 
@@ -236,7 +236,7 @@ function bones_comments( $comment, $args, $depth ) {
 
 /************* ADO Episode Custom Post Type *********************/
 
-
+/*
 add_action( 'init', 'create_post_type' );
 function create_post_type() {
   register_post_type( 'ado_episode',
@@ -257,6 +257,7 @@ function create_post_type() {
     )
   );
 }
+*/
 
 /*
 This is a modification of a function found in the

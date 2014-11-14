@@ -25,20 +25,25 @@
               <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
               <article id="post-<?php the_ID(); ?>" <?php post_class( 'cf' ); ?> role="article">
+              <!-- individual post -->
+              <?php
+                $post_id = get_the_ID();
+                $episode_summary = get_post_meta($post_id, '_cmb2_ado_summary', true);
+               ?> 
 
                 <header class="article-header">
 
                   <h3 class="h2"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
                   <p class="byline vcard"><?php
-                    printf( __( 'Posted <time class="updated" datetime="%1$s" pubdate>%2$s</time> by <span class="author">%3$s</span>', 'bonestheme' ), get_the_time( 'Y-m-j' ), get_the_time( __( 'F jS, Y', 'bonestheme' ) ), get_author_posts_url( get_the_author_meta( 'ID' ) ));
+                    printf( __( 'Posted <time class="updated" datetime="%1$s" pubdate>%2$s</time>', 'bonestheme' ), get_the_time( 'Y-m-j' ), get_the_time( __( 'F jS, Y', 'bonestheme' ) ), get_author_posts_url( get_the_author_meta( 'ID' ) ));
                   ?></p>
-                  <?php the_post_thumbnail('ado-episode-archive'); ?>
+                  <?php the_post_thumbnail('bones-thumb-200-square');  ?>
 
                 </header>
 
                 <section class="entry-content cf">
 
-                  <?php the_excerpt(); ?>
+                  <?php echo( wpautop( $episode_summary ) ); ?>
 
                 </section>
 

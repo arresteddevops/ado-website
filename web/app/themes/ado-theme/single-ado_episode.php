@@ -49,14 +49,16 @@
           <section class="entry-content cf">
           <?php the_post_thumbnail('bones-thumb-500-square'); ?>
           <?php $episode_summary = get_post_meta($post_id, '_cmb2_ado_summary', true); ?>
+          <?php $episode_shownotes  = get_post_meta($post_id, '_cmb2_ado_show_notes', true); ?>
           <?php echo( wpautop( $episode_summary ) ); ?>
           <?php //the_excerpt(); ?>
           <?php 
-            if (get_the_content() <> NULL){
+            if ($episode_shownotes <> NULL){
 
               echo do_shortcode('[powerpress]');
               echo "<h2>Show Notes</h2>";
-              the_content();
+              echo( wpautop( $episode_shownotes ) );
+              //the_content();
             }
             ?>
 
@@ -85,7 +87,13 @@
               if ($checkout <> NULL){
                 echo('<h2>Check Outs</h2>');
                 echo( wpautop( $checkout ) );
-              }
+              } ?>
+
+              <hr />
+
+              <h3>Thanks to our awesome sponsors!</h3>
+
+              <?php
               $sponsor_1_url =  get_post_meta( $post->ID, '_cmb2_ado_sponsor_1_url', true );
               $sponsor_1_banner =  get_post_meta( $post->ID, '_cmb2_sponsor_1_banner', true );
               $sponsor_1_text = get_post_meta( $post->ID, '_cmb2_ado_sponsor_1_text', true );
@@ -101,6 +109,8 @@
                 echo('<a href = "' . $sponsor_2_url . '"><img src ="' . $sponsor_2_banner . '"></a>');
               }
               ?>
+
+              <hr />
             
           </section> <!-- end article section -->
 

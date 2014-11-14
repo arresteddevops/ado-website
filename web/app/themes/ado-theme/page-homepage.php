@@ -35,14 +35,19 @@
               if( $my_query->have_posts() ) {
  
                 while ($my_query->have_posts()) : $my_query->the_post();
-                 ?>
-                <!-- individual post -->
+                 
+                echo('<!-- individual post -->');
+                $post_id = get_the_ID();
+                $episode_summary = get_post_meta($post_id, '_cmb2_ado_summary', true); 
+
+                ?>
+
 
                 <div id="post" class="span_4 col" role="post">
                   <?php the_post_thumbnail('bones-thumb-200-square'); ?>
                   <br />
                   <b><?php the_title(); ?></b>
-                  <?php the_excerpt(); ?>
+                  <?php echo( wpautop( $episode_summary ) ); ?>
                 </div>  
                   <?php
                 //end the individual part

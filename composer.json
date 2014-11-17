@@ -55,7 +55,7 @@
     }
   ],
   "require": {
-    "php": ">=5.4",
+    "php": ">=5.3.2",
     "wordpress/wordpress": "4.0",
     "fancyguy/webroot-installer": "1.1.0",
     "composer/installers": "v1.0.12",
@@ -66,8 +66,7 @@
     "wpackagist-plugin/powerpress": "*",
     "wpackagist-plugin/simple-local-avatars": "*",
     "wpackagist-plugin/ewww-image-optimizer": "*",
-    "wpackagist-plugin/regenerate-thumbnails": "*",
-    "wpackagist-plugin/import-users-from-csv": "*"
+    "wpackagist-plugin/regenerate-thumbnails": "*"
   },
   "extra": {
     "installer-paths": {

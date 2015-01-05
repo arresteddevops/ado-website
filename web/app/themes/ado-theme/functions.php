@@ -27,8 +27,6 @@ function bones_ahoy() {
   // let's get language support going, if you need it
   load_theme_textdomain( 'bonestheme', get_template_directory() . '/library/translation' );
 
-  // USE THIS TEMPLATE TO CREATE CUSTOM POST TYPES EASILY
-  require_once( 'library/ado_episode_post_type.php' );
 
   // launching operation cleanup
   add_action( 'init', 'bones_head_cleanup' );
@@ -236,16 +234,9 @@ function bones_comments( $comment, $args, $depth ) {
 
 /************* ADO Episode Custom Post Type *********************/
 
-require_once( 'library/ado-metaboxes.php' );
-
 /* Allow line breaks in user bios */
 
-remove_filter('pre_user_description', 'wp_filter_kses');
-add_filter('pre_user_description', 'wp_filter_post_kses');
-add_filter('pre_user_description', 'wptexturize');
-add_filter('pre_user_description', 'wpautop');
-add_filter('pre_user_description', 'convert_chars');
-add_filter('pre_user_description', 'balanceTags', 50);
+
 
 /*
 This is a modification of a function found in the

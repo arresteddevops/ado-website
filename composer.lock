@@ -4,8 +4,22 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "4a7d1ef0960100e8e5095a701e5900fd",
+    "hash": "2bf304c3ce41accbc71c9a9c2e931de5",
     "packages": [
+        {
+            "name": "arresteddevops/ado-plugin",
+            "version": "1.2.1",
+            "dist": {
+                "type": "zip",
+                "url": "https://github.com/arresteddevops/ado-plugin/archive/master.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "*"
+            },
+            "type": "wordpress-plugin"
+        },
         {
             "name": "composer/installers",
             "version": "v1.0.12",
@@ -198,6 +212,26 @@
             "type": "webroot"
         },
         {
+            "name": "wpackagist-plugin/cmb2",
+            "version": "2.0.0.7",
+            "source": {
+                "type": "svn",
+                "url": "http://plugins.svn.wordpress.org/cmb2/",
+                "reference": "trunk"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "http://downloads.wordpress.org/plugin/cmb2.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/cmb2/"
+        },
+        {
             "name": "wpackagist-plugin/co-authors-plus",
             "version": "3.1.1",
             "source": {
@@ -245,49 +279,43 @@
         },
         {
             "name": "wpackagist-plugin/ewww-image-optimizer",
-            "version": "2.1.0",
+            "version": "2.1.2",
             "source": {
                 "type": "svn",
                 "url": "http://plugins.svn.wordpress.org/ewww-image-optimizer/",
-                "reference": "tags/2.1.0"
+                "reference": "tags/2.1.2"
             },
             "dist": {
                 "type": "zip",
-                "url": "http://downloads.wordpress.org/plugin/ewww-image-optimizer.2.1.0.zip",
+                "url": "http://downloads.wordpress.org/plugin/ewww-image-optimizer.2.1.2.zip",
                 "reference": null,
                 "shasum": null
             },
             "require": {
                 "composer/installers": "~1.0"
             },
-            "replace": {
-                "wpackagist/ewww-image-optimizer": "self.version"
-            },
             "type": "wordpress-plugin",
-            "homepage": "http://wordpress.org/plugins/ewww-image-optimizer/"
+            "homepage": "https://wordpress.org/plugins/ewww-image-optimizer/"
         },
         {
             "name": "wpackagist-plugin/powerpress",
-            "version": "5.0.9",
+            "version": "6.0",
             "source": {
                 "type": "svn",
                 "url": "http://plugins.svn.wordpress.org/powerpress/",
-                "reference": "tags/5.0.9"
+                "reference": "tags/6.0"
             },
             "dist": {
                 "type": "zip",
-                "url": "http://downloads.wordpress.org/plugin/powerpress.5.0.9.zip",
+                "url": "http://downloads.wordpress.org/plugin/powerpress.6.0.zip",
                 "reference": null,
                 "shasum": null
             },
             "require": {
                 "composer/installers": "~1.0"
             },
-            "replace": {
-                "wpackagist/powerpress": "self.version"
-            },
             "type": "wordpress-plugin",
-            "homepage": "http://wordpress.org/plugins/powerpress/"
+            "homepage": "https://wordpress.org/plugins/powerpress/"
         },
         {
             "name": "wpackagist-plugin/regenerate-thumbnails",

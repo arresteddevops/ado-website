@@ -52,7 +52,22 @@
           "fancyguy/webroot-installer": "1.1.0"
         }
       }
-    }
+    },
+    {
+      "type": "package",
+      "package": {
+        "name": "arresteddevops/ado-plugin",
+        "version": "1.2.1",
+        "type": "wordpress-plugin",
+        "dist": {
+          "type": "zip",
+          "url": "https://github.com/arresteddevops/ado-plugin/archive/master.zip"
+        },
+        "require" : {
+          "composer/installers": "*"
+        }
+      }
+    }    
   ],
   "require": {
     "php": ">=5.3.2",
@@ -60,13 +75,15 @@
     "fancyguy/webroot-installer": "1.1.0",
     "composer/installers": "v1.0.12",
     "vlucas/phpdotenv": "~1.0.9",
+    "arresteddevops/ado-plugin": "*",
     "wpackagist-plugin/CryptX": "~3.2.8",
     "wpackagist-plugin/co-authors-plus": "*",
     "wpackagist-plugin/wp-biographia": "*",
     "wpackagist-plugin/powerpress": "*",
     "wpackagist-plugin/simple-local-avatars": "*",
     "wpackagist-plugin/ewww-image-optimizer": "*",
-    "wpackagist-plugin/regenerate-thumbnails": "*"
+    "wpackagist-plugin/regenerate-thumbnails": "*",
+    "wpackagist-plugin/cmb2": "*"
   },
   "extra": {
     "installer-paths": {

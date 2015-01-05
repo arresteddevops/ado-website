@@ -889,14 +889,14 @@ Span 3:    100%
   */
   .span_1 {
     width: 33.3333333333%;
-    border-left-width: 2px;
-    padding: 0 2px;
+    border-left-width: 12px;
+    padding: 0 12px;
     margin-left: 0; }
 
   .span_2 {
     width: 66.6666666667%;
-    border-left-width: 2px;
-    padding: 0 2px;
+    border-left-width: 12px;
+    padding: 0 12px;
     margin-left: 0; }
 
   .span_3 {
@@ -983,68 +983,68 @@ Span 12:    100%
   /* --- Gridpak variables ---*/
   .span_1 {
     width: 8.3333333333%;
-    border-left-width: 12px;
-    padding: 0 12px;
+    border-left-width: 5px;
+    padding: 0 5px;
     margin-left: 0; }
 
   .span_2 {
     width: 16.6666666667%;
-    border-left-width: 12px;
-    padding: 0 12px;
+    border-left-width: 5px;
+    padding: 0 5px;
     margin-left: 0; }
 
   .span_3 {
     width: 25%;
-    border-left-width: 12px;
-    padding: 0 12px;
+    border-left-width: 5px;
+    padding: 0 5px;
     margin-left: 0; }
 
   .span_4 {
     width: 33.3333333333%;
-    border-left-width: 12px;
-    padding: 0 12px;
+    border-left-width: 5px;
+    padding: 0 5px;
     margin-left: 0; }
 
   .span_5 {
     width: 41.6666666667%;
-    border-left-width: 12px;
-    padding: 0 12px;
+    border-left-width: 5px;
+    padding: 0 5px;
     margin-left: 0; }
 
   .span_6 {
     width: 50%;
-    border-left-width: 12px;
-    padding: 0 12px;
+    border-left-width: 5px;
+    padding: 0 5px;
     margin-left: 0; }
 
   .span_7 {
     width: 58.3333333333%;
-    border-left-width: 12px;
-    padding: 0 12px;
+    border-left-width: 5px;
+    padding: 0 5px;
     margin-left: 0; }
 
   .span_8 {
     width: 66.6666666667%;
-    border-left-width: 12px;
-    padding: 0 12px;
+    border-left-width: 5px;
+    padding: 0 5px;
     margin-left: 0; }
 
   .span_9 {
     width: 75%;
-    border-left-width: 12px;
-    padding: 0 12px;
+    border-left-width: 5px;
+    padding: 0 5px;
     margin-left: 0; }
 
   .span_10 {
     width: 83.3333333333%;
-    border-left-width: 12px;
-    padding: 0 12px;
+    border-left-width: 5px;
+    padding: 0 5px;
     margin-left: 0; }
 
   .span_11 {
     width: 91.6666666667%;
-    border-left-width: 12px;
-    padding: 0 12px;
+    border-left-width: 5px;
+    padding: 0 5px;
     margin-left: 0; }
 
   .span_12 {

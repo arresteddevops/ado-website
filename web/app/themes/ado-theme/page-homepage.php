@@ -19,9 +19,9 @@
 
         <div id="inner-content" class="wrap cf">
 
-            <div id="main" class="span_9 cf" role="main">
+            <div id="main" class="m-all t-2of3 d-5of7 cf" role="main">
 
-            <div class="row">
+            <div class="row cf">
 
               <?php
               $args=array(
@@ -32,6 +32,7 @@
               );
               $my_query = null;
               $my_query = new WP_Query($args);
+              $my_count = 0;
               if( $my_query->have_posts() ) {
  
                 while ($my_query->have_posts()) : $my_query->the_post();
@@ -39,15 +40,17 @@
                 echo('<!-- individual post -->');
                 $post_id = get_the_ID();
                 $episode_summary = get_post_meta($post_id, '_cmb2_ado_summary', true); 
+                $episode_summary = substr($episode_summary, 0, 250);  // returns "abcde"
 
                 ?>
 
 
-                <div id="post" class="span_4 col" role="post">
+                <div id="post" class="span_3 col" role="post">
                   <?php the_post_thumbnail('bones-thumb-200-square'); ?>
                   <br />
                   <b><?php the_title(); ?></b>
                   <?php echo( wpautop( $episode_summary ) ); ?>
+                  <?php echo( ++$my_count); ?>
                 </div>  
                   <?php
                 //end the individual part
@@ -57,8 +60,6 @@
               ?>
               </div>
             </div>
-
-          <?php get_sidebar(); ?>
 
         </div>
 

@@ -1,84 +1,21 @@
-<?php
-/*
- * CUSTOM POST TYPE ARCHIVE TEMPLATE
- *
- * This is the custom post type archive template. If you edit the custom post type name,
- * you've got to change the name of this template to reflect that name change.
- *
- * For Example, if your custom post type is called "register_post_type( 'bookmarks')",
- * then your template name should be archive-bookmarks.php
- *
- * For more info: http://codex.wordpress.org/Post_Type_Templates
-*/
-?>
+<?php get_template_part('templates/page', 'header'); ?>
 
-<?php get_header(); ?>
+<?php if (!have_posts()) : ?>
+  <div class="alert alert-warning">
+    <?php _e('Sorry, no results were found.', 'roots'); ?>
+  </div>
+  <?php get_search_form(); ?>
+<?php endif; ?>
 
-      <div id="content">
+<?php while (have_posts()) : the_post(); ?>
+  <?php get_template_part('templates/content', get_post_format()); ?>
+<?php endwhile; ?>
 
-        <div id="inner-content" class="wrap cf">
-
-            <div id="main" class="m-all t-2of3 d-5of7 cf" role="main">
-
-            <h1 class="archive-title h2"><?php post_type_archive_title(); ?></h1>
-
-              <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-
-              <article id="post-<?php the_ID(); ?>" <?php post_class( 'cf' ); ?> role="article">
-              <!-- individual post -->
-              <?php
-                $post_id = get_the_ID();
-                $episode_summary = get_post_meta($post_id, '_cmb2_ado_summary', true);
-               ?> 
-
-                <header class="article-header">
-
-                  <h3 class="h2"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
-                  <p class="byline vcard"><?php
-                    printf( __( 'Posted <time class="updated" datetime="%1$s" pubdate>%2$s</time>', 'bonestheme' ), get_the_time( 'Y-m-j' ), get_the_time( __( 'F jS, Y', 'bonestheme' ) ), get_author_posts_url( get_the_author_meta( 'ID' ) ));
-                  ?></p>
-                  <?php the_post_thumbnail('bones-thumb-200-square');  ?>
-
-                </header>
-
-                <section class="entry-content cf">
-
-                  <?php echo( wpautop( $episode_summary ) ); ?>
-
-                </section>
-
-                <footer class="article-footer">
-
-                </footer>
-
-              </article>
-
-              <?php endwhile; ?>
-
-                  <?php bones_page_navi(); ?>
-
-              <?php else : ?>
-
-                  <article id="post-not-found" class="hentry cf">
-                    <header class="article-header">
-                      <h1><?php _e( 'Oops, Post Not Found!', 'bonestheme' ); ?></h1>
-                    </header>
-                    <section class="entry-content">
-                      <p><?php _e( 'Uh Oh. Something is missing. Try double checking things.', 'bonestheme' ); ?></p>
-                    </section>
-                    <footer class="article-footer">
-                        <p><?php _e( 'This is the error message in the custom posty type archive template.', 'bonestheme' ); ?></p>
-                    </footer>
-                  </article>
-
-              <?php endif; ?>
-
-            </div>
-
-          <?php get_sidebar(); ?>
-
-        </div>
-
-      </div>
-
-<?php get_footer(); ?>
+<?php if ($wp_query->max_num_pages > 1) : ?>
+  <nav class="post-nav">
+    <ul class="pager">
+      <li class="previous"><?php next_posts_link(__('&larr; Older posts', 'roots')); ?></li>
+      <li class="next"><?php previous_posts_link(__('Newer posts &rarr;', 'roots')); ?></li>
+    </ul>
+  </nav>
+<?php endif; ?>

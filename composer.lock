@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "2bf304c3ce41accbc71c9a9c2e931de5",
+    "hash": "773c01103008612b409725d982613044",
     "packages": [
         {
             "name": "arresteddevops/ado-plugin",
@@ -199,7 +199,7 @@
         },
         {
             "name": "wordpress/wordpress",
-            "version": "4.0",
+            "version": "4.1",
             "dist": {
                 "type": "zip",
                 "url": "https://wordpress.org/wordpress-4.0.zip",
@@ -248,11 +248,8 @@
             "require": {
                 "composer/installers": "~1.0"
             },
-            "replace": {
-                "wpackagist/co-authors-plus": "self.version"
-            },
             "type": "wordpress-plugin",
-            "homepage": "http://wordpress.org/plugins/co-authors-plus/"
+            "homepage": "https://wordpress.org/plugins/co-authors-plus/"
         },
         {
             "name": "wpackagist-plugin/cryptx",
@@ -271,11 +268,8 @@
             "require": {
                 "composer/installers": "~1.0"
             },
-            "replace": {
-                "wpackagist/cryptx": "self.version"
-            },
             "type": "wordpress-plugin",
-            "homepage": "http://wordpress.org/plugins/cryptx/"
+            "homepage": "https://wordpress.org/plugins/cryptx/"
         },
         {
             "name": "wpackagist-plugin/ewww-image-optimizer",
@@ -334,11 +328,8 @@
             "require": {
                 "composer/installers": "~1.0"
             },
-            "replace": {
-                "wpackagist/regenerate-thumbnails": "self.version"
-            },
             "type": "wordpress-plugin",
-            "homepage": "http://wordpress.org/plugins/regenerate-thumbnails/"
+            "homepage": "https://wordpress.org/plugins/regenerate-thumbnails/"
         },
         {
             "name": "wpackagist-plugin/simple-local-avatars",
@@ -357,11 +348,8 @@
             "require": {
                 "composer/installers": "~1.0"
             },
-            "replace": {
-                "wpackagist/simple-local-avatars": "self.version"
-            },
             "type": "wordpress-plugin",
-            "homepage": "http://wordpress.org/plugins/simple-local-avatars/"
+            "homepage": "https://wordpress.org/plugins/simple-local-avatars/"
         },
         {
             "name": "wpackagist-plugin/wp-biographia",
@@ -380,11 +368,8 @@
             "require": {
                 "composer/installers": "~1.0"
             },
-            "replace": {
-                "wpackagist/wp-biographia": "self.version"
-            },
             "type": "wordpress-plugin",
-            "homepage": "http://wordpress.org/plugins/wp-biographia/"
+            "homepage": "https://wordpress.org/plugins/wp-biographia/"
         }
     ],
     "packages-dev": [],

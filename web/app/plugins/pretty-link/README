@@ -1,5 +1,0 @@
-To install i18n pre-commit hook issue this command:
-
-```
-ln -s ../../script/mki18n .git/hooks/pre-commit
-```

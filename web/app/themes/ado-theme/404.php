@@ -1,43 +1,13 @@
-<?php get_header(); ?>
+<?php get_template_part('templates/page', 'header'); ?>
 
-			<div id="content">
+<div class="alert alert-warning">
+  <?php _e('Sorry, but the page you were trying to view does not exist.', 'roots'); ?>
+</div>
 
-				<div id="inner-content" class="wrap cf">
+<p><?php _e('It looks like this was the result of either:', 'roots'); ?></p>
+<ul>
+  <li><?php _e('a mistyped address', 'roots'); ?></li>
+  <li><?php _e('an out-of-date link', 'roots'); ?></li>
+</ul>
 
-					<div id="main" class="m-all t-2of3 d-5of7 cf" role="main">
-
-						<article id="post-not-found" class="hentry cf">
-
-							<header class="article-header">
-
-								<h1><?php _e( 'Epic 404 - Article Not Found', 'bonestheme' ); ?></h1>
-
-							</header>
-
-							<section class="entry-content">
-
-								<p><?php _e( 'The article you were looking for was not found, but maybe try looking again!', 'bonestheme' ); ?></p>
-
-							</section>
-
-							<section class="search">
-
-									<p><?php get_search_form(); ?></p>
-
-							</section>
-
-							<footer class="article-footer">
-
-									<p><?php _e( 'This is the 404.php template.', 'bonestheme' ); ?></p>
-
-							</footer>
-
-						</article>
-
-					</div>
-
-				</div>
-
-			</div>
-
-<?php get_footer(); ?>
+<?php get_search_form(); ?>

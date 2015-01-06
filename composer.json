@@ -41,21 +41,6 @@
     {
       "type": "package",
       "package": {
-        "name": "wordpress/wordpress",
-        "version": "4.1",
-        "type": "webroot",
-        "dist": {
-          "type": "zip",
-          "url": "https://wordpress.org/wordpress-4.0.zip"
-        },
-        "require" : {
-          "fancyguy/webroot-installer": "1.1.0"
-        }
-      }
-    },
-    {
-      "type": "package",
-      "package": {
         "name": "arresteddevops/ado-plugin",
         "version": "1.2.1",
         "type": "wordpress-plugin",
@@ -71,8 +56,7 @@
   ],
   "require": {
     "php": ">=5.3.2",
-    "wordpress/wordpress": "4.1",
-    "fancyguy/webroot-installer": "1.1.0",
+    "johnpbloch/wordpress": "4.1",
     "composer/installers": "v1.0.12",
     "vlucas/phpdotenv": "~1.0.9",
     "arresteddevops/ado-plugin": "*",
@@ -94,7 +78,6 @@
       "web/app/plugins/{$name}/": ["type:wordpress-plugin"],
       "web/app/themes/{$name}/": ["type:wordpress-theme"]
     },
-    "webroot-dir": "web/wp",
-    "webroot-package": "wordpress/wordpress"
+    "wordpress-install-dir": "web/wp"
   }
 }

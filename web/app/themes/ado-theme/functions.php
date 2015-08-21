@@ -193,6 +193,16 @@ function bones_register_sidebars() {
 } // don't remove this bracket!
 
 
+function ado_script_enqueuer() {
+    wp_register_script( 'bootstrap', get_template_directory_uri().'/external/bootstrap/js/bootstrap.min.js', array( 'jquery' ) );
+    wp_enqueue_script( 'bootstrap' );
+
+    wp_register_style( 'bootstrap', get_stylesheet_directory_uri().'/external/bootstrap/css/bootstrap.min.css', '', '', 'screen' );
+    wp_enqueue_style( 'bootstrap' );
+}
+add_action( 'wp_enqueue_scripts', 'ado_script_enqueuer' );
+
+
 /************* COMMENT LAYOUT *********************/
 
 // Comment Layout
